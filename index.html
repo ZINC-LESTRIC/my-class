@@ -89,6 +89,17 @@ body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--tex
   .hero h1{min-height:3.2em}
   .sourcing-box{padding:1.5rem}
 }
+body{background:
+  radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0,212,255,.08), transparent),
+  radial-gradient(ellipse 60% 40% at 100% 50%, rgba(124,58,237,.06), transparent),
+  var(--bg);}
+.section{padding:6rem 0}
+.section + .section{border-top:1px solid rgba(0,212,255,.08)}
+.proj-grid{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.nav{transition:background .3s,box-shadow .3s}
+.nav.scrolled{box-shadow:0 8px 32px rgba(0,0,0,.4)}
+.hero{background:linear-gradient(180deg,rgba(0,212,255,.03) 0%,transparent 60%)}
+
 </style>
 </head>
 <body>
@@ -175,16 +186,6 @@ body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--tex
         <p>Trade intelligence SaaS for Pakistan's export sector. Shipment trends, buyer patterns, AI analytics so exporters stop flying blind. Launch target 2026.</p>
         <div class="tags"><span>Trade Intelligence</span><span>Data</span><span>AI</span><span>SaaS</span></div>
       </article>
-      <article class="proj reveal stagger-5">
-        <div class="proj-top"><h3>K-Crust</h3><span class="badge dev">In Dev</span></div>
-        <p>Korean corn dog street food brand launching in Sialkot. Custom brand identity, menu, and digital presence.</p>
-        <div class="tags"><span>Brand</span><span>Food Tech</span><span>Sialkot</span></div>
-      </article>
-      <article class="proj reveal stagger-6">
-        <div class="proj-top"><h3>Sequel Sports</h3><span class="badge dev">In Dev</span></div>
-        <p>Sportswear export digital catalogue for international buyers. Clean product showcase with inquiry flow.</p>
-        <div class="tags"><span>Next.js</span><span>Export</span><span>B2B</span></div>
-      </article>
     </div>
   </div>
 </section>
@@ -243,6 +244,7 @@ body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--tex
   }
   tick();
 
+  window.addEventListener("scroll",()=>{const n=document.getElementById("navbar");if(n)n.classList.toggle("scrolled",scrollY>20);},{passive:true});
   const burger=document.getElementById("burger");
   const navLinks=document.getElementById("navLinks");
   if(burger) burger.onclick=()=>navLinks.classList.toggle("open");
