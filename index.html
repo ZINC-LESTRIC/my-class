@@ -3,213 +3,166 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ahmar Ashraf — Full-Stack Developer × AI Builder</title>
-  <meta name="description" content="Full-stack developer and AI builder from Sialkot. Next.js, GitHub agents, automation, and trade-tech tools." />
+  <title>Ahmar Ashraf — Software Engineer</title>
+  <meta name="description" content="Software engineer and AI builder. Next.js, systems, and product-focused tools from Sialkot." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <canvas id="bg-canvas"></canvas>
-  <div class="orb orb-1"></div>
-  <div class="orb orb-2"></div>
-  <div class="orb orb-3"></div>
+  <div class="noise" aria-hidden="true"></div>
 
-  <nav class="navbar" id="navbar">
-    <div class="nav-inner">
-      <a href="#hero" class="logo"><span class="logo-mark">◈</span> Ahmar Ashraf</a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#companies">Building</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+  <header class="site-header" id="header">
+    <div class="wrap header-inner">
+      <a href="#top" class="brand">Ahmar Ashraf</a>
+      <nav class="nav" id="nav">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu"><span></span></button>
     </div>
-  </nav>
+  </header>
 
-  <section class="hero" id="hero">
-    <div class="hero-content">
-      <p class="hero-label reveal">
-        <span class="pulse-dot"></span>
-        Full-Stack Developer · AI Builder · Sialkot
-      </p>
-      <h1 class="reveal">
-        <span class="line">I build software</span>
-        <span class="line gradient-text">that ships.</span>
-      </h1>
-      <p class="hero-sub reveal">
-        Next.js apps, AI agents, and automation systems — with real domain context from Pakistan’s export ecosystem.
-      </p>
-      <div class="hero-ctas reveal">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="#contact" class="btn btn-ghost">Let’s talk</a>
-      </div>
-      <div class="hero-stats reveal">
-        <div class="stat"><span class="stat-num" data-count="6">0</span><span class="stat-label">Live products</span></div>
-        <div class="stat"><span class="stat-num" data-count="3">0</span><span class="stat-label">AI tools shipped</span></div>
-        <div class="stat"><span class="stat-num">∞</span><span class="stat-label">Learning mode</span></div>
-      </div>
-    </div>
-    <div class="scroll-indicator reveal"><span></span></div>
-  </section>
-
-  <section class="section about" id="about">
-    <div class="container">
-      <p class="section-eyebrow reveal">About</p>
-      <h2 class="section-title reveal">Builder first.<br /><span class="muted">Domain as an edge.</span></h2>
-      <div class="about-grid">
-        <p class="about-text reveal">
-          I’m a self-taught full-stack developer from Sialkot. I ship production web apps, AI-integrated tools, and automation workflows — from dark terminal dashboards to voice-controlled interfaces.
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <p class="eyebrow fade-up">Software Engineer · AI Systems · Sialkot</p>
+        <h1 class="fade-up delay-1">
+          Building precise software<br />
+          <em>for real problems.</em>
+        </h1>
+        <p class="lede fade-up delay-2">
+          I design and ship full-stack products, AI agents, and automation —
+          with the discipline of engineering and the context of trade operations.
         </p>
-        <p class="about-text reveal">
-          My stack centers on <strong>Next.js</strong>, <strong>JavaScript</strong>, <strong>GitHub APIs</strong>, and <strong>AI providers</strong> (Groq, Gemini). I care about clean UX, fast deploys on Vercel, and tools people actually use.
-        </p>
-        <p class="about-text reveal">
-          I also work in customs &amp; export ops. That dual context lets me build trade-tech products that solve real Sialkot exporter problems — not generic demos.
-        </p>
+        <div class="hero-actions fade-up delay-3">
+          <a href="#work" class="btn-solid">Selected work</a>
+          <a href="#contact" class="btn-line">Get in touch</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section skills" id="skills">
-    <div class="container">
-      <p class="section-eyebrow reveal">Skills</p>
-      <h2 class="section-title reveal">What I work with</h2>
-      <div class="skills-grid">
-        <div class="skill-group reveal">
-          <div class="skill-icon">⌘</div>
-          <h3>Frontend &amp; Apps</h3>
-          <div class="tags">
-            <span>Next.js</span><span>React</span><span>JavaScript</span><span>HTML / CSS</span><span>Responsive UI</span><span>Terminal-style UX</span>
-          </div>
-        </div>
-        <div class="skill-group reveal">
-          <div class="skill-icon">⚡</div>
-          <h3>AI &amp; Agents</h3>
-          <div class="tags">
-            <span>Groq</span><span>Gemini</span><span>LLM APIs</span><span>AI Chat Agents</span><span>Prompt Systems</span><span>Voice APIs</span>
-          </div>
-        </div>
-        <div class="skill-group reveal">
-          <div class="skill-icon">⚙</div>
-          <h3>Backend &amp; APIs</h3>
-          <div class="tags">
-            <span>REST APIs</span><span>GitHub API</span><span>Node.js</span><span>Serverless</span><span>Auth Tokens</span><span>Webhooks</span>
-          </div>
-        </div>
-        <div class="skill-group reveal">
-          <div class="skill-icon">↻</div>
-          <h3>Automation</h3>
-          <div class="tags">
-            <span>n8n</span><span>Workflows</span><span>Web Scraping</span><span>Google Sheets</span><span>Lead Pipelines</span>
-          </div>
-        </div>
-        <div class="skill-group reveal">
-          <div class="skill-icon">☁</div>
-          <h3>Ship &amp; Tools</h3>
-          <div class="tags">
-            <span>Vercel</span><span>Git / GitHub</span><span>Python</span><span>Gumroad</span><span>Fiverr</span>
-          </div>
-        </div>
-        <div class="skill-group reveal">
-          <div class="skill-icon">◇</div>
-          <h3>Domain Edge</h3>
-          <div class="tags">
-            <span>Customs / GD</span><span>HS Classification</span><span>Export Ops</span><span>Trade Data</span><span>PSW / WeBOC</span>
+    <section class="section about" id="about">
+      <div class="wrap">
+        <div class="section-label fade-up">01 — About</div>
+        <div class="about-layout">
+          <h2 class="fade-up">Engineer first.<br /><span class="soft">Domain as leverage.</span></h2>
+          <div class="about-copy">
+            <p class="fade-up">I am a self-taught software engineer based in Sialkot. I build production web applications, AI-integrated systems, and operational tooling — from developer infrastructure to voice interfaces.</p>
+            <p class="fade-up">My practice centers on <strong>Next.js</strong>, modern JavaScript, API design, and LLM systems (Groq, Gemini). I prioritise clarity, reliability, and interfaces people return to.</p>
+            <p class="fade-up">Alongside engineering, I work in customs and export operations. That dual fluency lets me ship trade-technology that fits real workflows — not speculative demos.</p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section companies" id="companies">
-    <div class="container">
-      <p class="section-eyebrow reveal">Building</p>
-      <h2 class="section-title reveal">In progress</h2>
-      <div class="projects-grid">
-        <article class="project-card reveal featured">
-          <div class="project-top">
-            <h3>TradeIntel</h3>
-            <span class="status dev">In Development</span>
-          </div>
-          <p>Trade intelligence platform for Pakistan’s export sector. Shipment trends, buyer patterns, and AI analytics so exporters stop flying blind. Launch target 2027.</p>
-          <div class="tags">
-            <span>Trade Intelligence</span><span>Data</span><span>AI</span><span>SaaS</span>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
+    <section class="section work" id="work">
+      <div class="wrap">
+        <div class="section-label fade-up">02 — Selected work</div>
+        <h2 class="section-title fade-up">Projects</h2>
 
-  <section class="section projects" id="projects">
-    <div class="container">
-      <p class="section-eyebrow reveal">Projects</p>
-      <h2 class="section-title reveal">Shipped work</h2>
-      <div class="projects-grid">
-
-        <article class="project-card reveal">
-          <div class="project-top">
-            <h3>ZINC Agent</h3>
-            <span class="status live">Live</span>
+        <article class="work-item fade-up">
+          <div class="work-meta">
+            <span class="work-status live">Live</span>
+            <span class="work-year">2026</span>
           </div>
-          <p>AI project intelligence hub for developers. Live GitHub data, file browser, create issues from chat, and an agent that understands your repos. Dark terminal UI. Source available as a template.</p>
-          <div class="tags">
-            <span>Next.js</span><span>Groq AI</span><span>GitHub API</span><span>Vercel</span>
-          </div>
-          <a href="https://ahmerstone2.gumroad.com/l/foubdo" target="_blank" rel="noopener" class="project-link">Buy Source →</a>
+          <h3>ZINC Agent</h3>
+          <p>An AI project intelligence hub for developers. Live GitHub integration, repository file browsing, issue creation from chat, and an agent grounded in the user’s actual codebase. Terminal-informed interface. Source available as a commercial template.</p>
+          <div class="work-tags"><span>Next.js</span><span>Groq</span><span>GitHub API</span><span>Vercel</span></div>
+          <a href="https://ahmerstone2.gumroad.com/l/foubdo" target="_blank" rel="noopener" class="work-link">Acquire source →</a>
         </article>
 
-        <article class="project-card reveal">
-          <div class="project-top">
-            <h3>TariffAI</h3>
-            <span class="status live">Live</span>
+        <article class="work-item fade-up">
+          <div class="work-meta">
+            <span class="work-status live">Live</span>
+            <span class="work-year">2026</span>
           </div>
-          <p>AI-powered Pakistan Customs HS Code classifier. English or Roman Urdu product descriptions → PCT codes, confidence scores, chapter, and duty rates. Built for exporters and declarants.</p>
-          <div class="tags">
-            <span>Gemini AI</span><span>Vanilla JS</span><span>Vercel</span><span>Customs</span>
-          </div>
-          <a href="https://tariffai.vercel.app" target="_blank" rel="noopener" class="project-link">Open Tool →</a>
+          <h3>TariffAI</h3>
+          <p>AI classifier for Pakistan Customs HS codes. Accepts product descriptions in English or Roman Urdu and returns PCT codes, confidence scores, chapter context, and duty rates — built for exporters and goods declarants.</p>
+          <div class="work-tags"><span>Gemini</span><span>JavaScript</span><span>Vercel</span><span>Trade</span></div>
+          <a href="https://tariffai.vercel.app" target="_blank" rel="noopener" class="work-link">Open product →</a>
         </article>
 
-        <article class="project-card reveal">
-          <div class="project-top">
-            <h3>Vocal Checkmate</h3>
-            <span class="status live">Live</span>
+        <article class="work-item fade-up">
+          <div class="work-meta">
+            <span class="work-status live">Live</span>
+            <span class="work-year">2025</span>
           </div>
-          <p>Fully voice-controlled chess. Say “E4” and the piece moves. Built to train calculation and board vision without looking at the board. Game history and mistake review included.</p>
-          <div class="tags">
-            <span>JavaScript</span><span>Voice API</span><span>Chess Engine</span>
-          </div>
-          <a href="https://vocal-checkmate.vercel.app" target="_blank" rel="noopener" class="project-link">Open App →</a>
+          <h3>Vocal Checkmate</h3>
+          <p>Fully voice-controlled chess. Spoken moves execute on the board. Designed to train calculation and spatial vision without visual reliance on the pieces. Includes history and post-game review.</p>
+          <div class="work-tags"><span>JavaScript</span><span>Speech API</span><span>Chess engine</span></div>
+          <a href="https://vocal-checkmate.vercel.app" target="_blank" rel="noopener" class="work-link">Open app →</a>
         </article>
 
+        <article class="work-item fade-up in-progress">
+          <div class="work-meta">
+            <span class="work-status dev">In development</span>
+            <span class="work-year">2027</span>
+          </div>
+          <h3>TradeIntel</h3>
+          <p>Trade intelligence platform for Pakistan’s export sector. Shipment patterns, buyer signals, and AI-assisted analytics so operators stop navigating blind. Core product in active build.</p>
+          <div class="work-tags"><span>SaaS</span><span>Data</span><span>AI</span><span>Trade</span></div>
+        </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section contact" id="contact">
-    <div class="container">
-      <p class="section-eyebrow reveal">Contact</p>
-      <h2 class="section-title reveal">Let’s build something</h2>
-      <p class="contact-sub reveal">Apps, AI tools, automation, or trade-tech — reach out.</p>
-      <div class="contact-buttons reveal">
-        <a href="mailto:jslegacyapproach@gmail.com" class="contact-btn"><span class="icon">✉</span><span>Email</span></a>
-        <a href="https://wa.me/923390112545" target="_blank" rel="noopener" class="contact-btn"><span class="icon">💬</span><span>WhatsApp</span></a>
-        <a href="https://www.linkedin.com/in/ahmar-ashraf-247545302" target="_blank" rel="noopener" class="contact-btn"><span class="icon">in</span><span>LinkedIn</span></a>
-        <a href="https://www.fiverr.com/ahmer10970" target="_blank" rel="noopener" class="contact-btn"><span class="icon">◆</span><span>Fiverr</span></a>
-        <a href="https://github.com/ZINC-LESTRIC" target="_blank" rel="noopener" class="contact-btn"><span class="icon">⌘</span><span>GitHub</span></a>
+    <section class="section skills" id="skills">
+      <div class="wrap">
+        <div class="section-label fade-up">03 — Capabilities</div>
+        <h2 class="section-title fade-up">Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-block fade-up">
+            <h4>Product &amp; frontend</h4>
+            <p>Next.js, React, JavaScript, HTML/CSS, responsive systems, interface design</p>
+          </div>
+          <div class="skill-block fade-up">
+            <h4>AI &amp; agents</h4>
+            <p>Groq, Gemini, LLM APIs, agent workflows, prompt architecture, voice interfaces</p>
+          </div>
+          <div class="skill-block fade-up">
+            <h4>Systems &amp; APIs</h4>
+            <p>REST, GitHub API, Node.js, serverless, authentication, webhooks</p>
+          </div>
+          <div class="skill-block fade-up">
+            <h4>Automation</h4>
+            <p>n8n, workflow design, web scraping, data pipelines, integrations</p>
+          </div>
+          <div class="skill-block fade-up">
+            <h4>Delivery</h4>
+            <p>Vercel, Git/GitHub, Python, product packaging, client delivery</p>
+          </div>
+          <div class="skill-block fade-up">
+            <h4>Domain</h4>
+            <p>Customs &amp; GD, HS classification, export operations, trade data, PSW/WeBOC</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer class="footer">
-    <p>© 2026 Ahmar Ashraf — Sialkot, Pakistan</p>
-    <p class="footer-sub">Built with intent. Shipped in public.</p>
+    <section class="section contact" id="contact">
+      <div class="wrap">
+        <div class="section-label fade-up">04 — Contact</div>
+        <h2 class="section-title fade-up">Let’s work</h2>
+        <p class="contact-lede fade-up">Products, agents, automation, or trade-tech systems. Serious inquiries only.</p>
+        <div class="contact-row fade-up">
+          <a href="mailto:jslegacyapproach@gmail.com">Email</a>
+          <a href="https://wa.me/923390112545" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://www.linkedin.com/in/ahmar-ashraf-247545302" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/ZINC-LESTRIC" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.fiverr.com/ahmer10970" target="_blank" rel="noopener">Fiverr</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <span>© 2026 Ahmar Ashraf</span>
+      <span class="footer-loc">Sialkot, Pakistan</span>
+    </div>
   </footer>
 
   <script src="script.js"></script>
