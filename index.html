@@ -1,143 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ahmar Ashraf — Full-Stack Developer × AI Builder</title>
-  <meta name="description" content="Full-stack developer and AI builder from Sialkot. Next.js, agents, automation, and production software." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ahmar Ashraf — Full-Stack Developer & Trade-Tech Builder</title>
+<meta name="description" content="Full-Stack Developer & Trade-Tech Builder from Sialkot. Production apps, AI tools, customs domain, and direct export sourcing." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0a0f1e;--bg2:#0d1428;--bg3:#111a30;--text:#ffffff;--muted:#94a3b8;
+  --cyan:#00d4ff;--violet:#7c3aed;--green:#22c55e;--yellow:#eab308;
+  --line:rgba(0,212,255,.12);--card:rgba(17,26,48,.85);
+}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+#particles{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.45}
+.wrap{max-width:1100px;margin:0 auto;padding:0 1.5rem;position:relative;z-index:1}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;backdrop-filter:blur(18px);background:rgba(10,15,30,.82);border-bottom:1px solid rgba(0,212,255,.25)}
+.nav-inner{max-width:1100px;margin:0 auto;padding:0 1.5rem;height:68px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.15rem;color:#fff;text-decoration:none;letter-spacing:-.02em}
+.nav-links{display:flex;gap:1.75rem;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.875rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--cyan)}
+.burger{display:none;background:0;border:0;cursor:pointer;flex-direction:column;gap:5px}
+.burger span{display:block;width:22px;height:2px;background:#fff}
+.hero{min-height:100vh;display:flex;align-items:center;padding:6.5rem 0 4rem;position:relative}
+.hero-inner{max-width:820px}
+.hero-label{font-size:.8rem;color:var(--cyan);letter-spacing:.12em;text-transform:uppercase;font-weight:600;margin-bottom:1.25rem}
+.hero h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(2.4rem,6.5vw,3.75rem);font-weight:700;line-height:1.15;letter-spacing:-.03em;margin-bottom:1.25rem;min-height:2.6em}
+.hero h1 .tw{color:var(--cyan);border-right:3px solid var(--cyan);padding-right:4px;animation:blink .8s step-end infinite}
+@keyframes blink{50%{border-color:transparent}}
+.hero-sub{font-size:1.1rem;color:var(--muted);max-width:540px;margin-bottom:2rem}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:3rem}
+.btn{display:inline-flex;align-items:center;padding:.85rem 1.5rem;border-radius:8px;font-size:.9rem;font-weight:600;text-decoration:none;font-family:Inter,sans-serif;transition:.25s}
+.btn-fill{background:var(--cyan);color:#0a0f1e;box-shadow:0 0 30px rgba(0,212,255,.35)}
+.btn-fill:hover{transform:translateY(-2px);box-shadow:0 0 40px rgba(0,212,255,.5)}
+.btn-outline{border:1.5px solid rgba(0,212,255,.45);color:var(--cyan);background:transparent}
+.btn-outline:hover{background:rgba(0,212,255,.08);border-color:var(--cyan);transform:translateY(-2px)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1.1rem 1rem;text-align:center}
+.stat strong{display:block;font-family:'Space Grotesk',sans-serif;font-size:1.6rem;font-weight:700;color:var(--cyan)}
+.stat span{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.section{padding:5.5rem 0;position:relative}
+.section-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.75rem,4vw,2.35rem);font-weight:700;letter-spacing:-.02em;margin-bottom:1.75rem}
+.section-title span{color:var(--cyan)}
+.lead{color:var(--muted);font-size:1.05rem;max-width:640px;margin-bottom:1.15rem}
+.lead strong{color:#fff;font-weight:600}
+.skill-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.15rem}
+.skill-card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.4rem;transition:.3s}
+.skill-card:hover{border-color:rgba(0,212,255,.45);box-shadow:0 0 28px rgba(0,212,255,.12);transform:translateY(-3px)}
+.skill-card h3{font-family:'Space Grotesk',sans-serif;font-size:.95rem;font-weight:600;margin-bottom:.85rem;color:var(--cyan)}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem}
+.tags span{font-size:.75rem;padding:.3rem .65rem;border-radius:999px;background:rgba(0,212,255,.06);border:1px solid rgba(0,212,255,.18);color:#cbd5e1}
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.2rem}
+.proj{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.5rem;transition:.3s;display:flex;flex-direction:column}
+.proj:hover{border-color:rgba(0,212,255,.5);box-shadow:0 0 32px rgba(0,212,255,.15);transform:translateY(-4px)}
+.proj-top{display:flex;justify-content:space-between;align-items:center;gap:.75rem;margin-bottom:.75rem}
+.proj h3{font-family:'Space Grotesk',sans-serif;font-size:1.15rem;font-weight:600}
+.badge{font-size:.65rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.25rem .55rem;border-radius:999px}
+.badge.live{background:rgba(34,197,94,.12);color:var(--green);border:1px solid rgba(34,197,94,.3)}
+.badge.dev{background:rgba(234,179,8,.12);color:var(--yellow);border:1px solid rgba(234,179,8,.3)}
+.proj p{color:var(--muted);font-size:.9rem;flex:1;margin-bottom:1rem}
+.proj-link{color:var(--cyan);font-weight:600;font-size:.875rem;text-decoration:none}
+.proj-link:hover{text-decoration:underline}
+.sourcing-box{background:linear-gradient(145deg,#111a30,#0d1528);border:1px solid rgba(124,58,237,.35);border-radius:16px;padding:2.25rem 2rem;box-shadow:0 0 40px rgba(124,58,237,.08)}
+.sourcing-box h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.6rem,3.5vw,2.1rem);font-weight:700;margin-bottom:.5rem}
+.sourcing-box .subhead{color:var(--violet);font-weight:600;margin-bottom:1.25rem;font-size:1rem}
+.sourcing-box p{color:var(--muted);margin-bottom:1rem;font-size:1rem}
+.cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.75rem;margin:1.5rem 0}
+.cat{background:rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:1rem}
+.cat strong{display:block;font-size:.9rem;margin-bottom:.25rem}
+.cat span{font-size:.8rem;color:var(--muted)}
+.contact-links{display:flex;flex-wrap:wrap;gap:1rem;margin-top:1.5rem}
+.contact-links a{display:inline-flex;padding:.75rem 1.25rem;border-radius:8px;border:1px solid var(--line);color:#fff;text-decoration:none;font-weight:500;font-size:.9rem;transition:.2s}
+.contact-links a:hover{border-color:var(--cyan);color:var(--cyan);box-shadow:0 0 20px rgba(0,212,255,.15)}
+.footer{padding:2rem 0;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:.8rem;position:relative;z-index:1}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+.stagger-1{transition-delay:.08s}.stagger-2{transition-delay:.16s}.stagger-3{transition-delay:.24s}
+.stagger-4{transition-delay:.32s}.stagger-5{transition-delay:.4s}.stagger-6{transition-delay:.48s}
+@media(max-width:768px){
+  .nav-links{display:none}.nav-links.open{display:flex;flex-direction:column;position:absolute;top:68px;left:0;right:0;background:rgba(10,15,30,.98);padding:1.25rem 1.5rem;gap:1rem;border-bottom:1px solid rgba(0,212,255,.25)}
+  .burger{display:flex}
+  .stats{grid-template-columns:1fr 1fr}
+  .hero h1{min-height:3.2em}
+  .sourcing-box{padding:1.5rem}
+}
+</style>
 </head>
 <body>
-  <canvas id="bg" aria-hidden="true"></canvas>
-  <div class="glow g1" aria-hidden="true"></div>
-  <div class="glow g2" aria-hidden="true"></div>
-  <div class="glow g3" aria-hidden="true"></div>
+<canvas id="particles"></canvas>
 
-  <header class="header" id="header">
-    <div class="wrap header-row">
-      <a href="#top" class="logo">Ahmar Ashraf</a>
-      <nav class="nav" id="nav">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#building">Building</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
+<nav class="nav" id="navbar">
+  <div class="nav-inner">
+    <a href="#top" class="brand">Ahmar Ashraf</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#sourcing">Sourcing</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section class="hero" id="top">
+  <div class="wrap hero-inner">
+    <p class="hero-label reveal">Sialkot, Pakistan</p>
+    <h1 class="reveal"><span id="typewriter" class="tw"></span></h1>
+    <p class="hero-sub reveal">I build production software with real domain context — from customs clearance to AI-powered export tools.</p>
+    <div class="hero-btns reveal">
+      <a href="#projects" class="btn btn-fill">View Projects</a>
+      <a href="#contact" class="btn btn-outline">Let's Talk</a>
     </div>
-  </header>
-
-  <main id="top">
-    <section class="hero">
-      <div class="wrap">
-        <p class="pill reveal"><span class="dot"></span> Full-Stack Developer · AI Builder · Sialkot</p>
-        <h1 class="reveal d1">I build software<br /><em class="grad">that ships.</em></h1>
-        <p class="sub reveal d2">Next.js products, AI agents, and automation systems — engineered with real domain context from Pakistan’s export ecosystem.</p>
-        <div class="cta reveal d3">
-          <a class="btn primary" href="#projects">View projects</a>
-          <a class="btn ghost" href="#contact">Let’s talk</a>
-        </div>
-        <div class="stats reveal d4">
-          <div><strong data-n="6">0</strong><span>Live products</span></div>
-          <div><strong data-n="3">0</strong><span>AI tools shipped</span></div>
-          <div><strong>∞</strong><span>Learning mode</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="sec" id="about">
-      <div class="wrap">
-        <p class="label reveal">01 — About</p>
-        <div class="about-grid">
-          <h2 class="reveal">Builder first.<br /><span class="dim">Domain as an edge.</span></h2>
-          <div class="about-body">
-            <p class="reveal">I’m a self-taught full-stack developer from Sialkot. I ship production web apps, AI-integrated tools, and automation workflows — from dark terminal dashboards to voice-controlled interfaces.</p>
-            <p class="reveal">My stack centers on <strong>Next.js</strong>, <strong>JavaScript</strong>, <strong>GitHub APIs</strong>, and <strong>AI providers</strong> (Groq, Gemini). I care about clean UX, fast deploys on Vercel, and tools people actually use.</p>
-            <p class="reveal">I also work in customs &amp; export ops. That dual context lets me build trade-tech that solves real Sialkot exporter problems — not generic demos.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="sec" id="skills">
-      <div class="wrap">
-        <p class="label reveal">02 — Skills</p>
-        <h2 class="reveal">What I work with</h2>
-        <div class="skills">
-          <article class="card reveal"><span class="ico">⌘</span><h3>Frontend &amp; Apps</h3><div class="tags"><span>Next.js</span><span>React</span><span>JavaScript</span><span>HTML / CSS</span><span>Responsive UI</span><span>Terminal-style UX</span></div></article>
-          <article class="card reveal"><span class="ico">⚡</span><h3>AI &amp; Agents</h3><div class="tags"><span>Groq</span><span>Gemini</span><span>LLM APIs</span><span>AI Chat Agents</span><span>Prompt Systems</span><span>Voice APIs</span></div></article>
-          <article class="card reveal"><span class="ico">⚙</span><h3>Backend &amp; APIs</h3><div class="tags"><span>REST APIs</span><span>GitHub API</span><span>Node.js</span><span>Serverless</span><span>Auth Tokens</span><span>Webhooks</span></div></article>
-          <article class="card reveal"><span class="ico">↻</span><h3>Automation</h3><div class="tags"><span>n8n</span><span>Workflows</span><span>Web Scraping</span><span>Google Sheets</span><span>Lead Pipelines</span></div></article>
-          <article class="card reveal"><span class="ico">☁</span><h3>Ship &amp; Tools</h3><div class="tags"><span>Vercel</span><span>Git / GitHub</span><span>Python</span><span>Gumroad</span><span>Fiverr</span></div></article>
-          <article class="card reveal"><span class="ico">◇</span><h3>Domain Edge</h3><div class="tags"><span>Customs / GD</span><span>HS Classification</span><span>Export Ops</span><span>Trade Data</span><span>PSW / WeBOC</span></div></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="sec" id="building">
-      <div class="wrap">
-        <p class="label reveal">03 — Building</p>
-        <h2 class="reveal">In progress</h2>
-        <article class="project featured reveal">
-          <div class="prow"><h3>TradeIntel</h3><span class="badge dev">In Development</span></div>
-          <p>Trade intelligence for Pakistan’s export sector. Shipment trends, buyer patterns, and AI analytics so exporters stop flying blind. Launch target 2027.</p>
-          <div class="tags"><span>Trade Intelligence</span><span>Data</span><span>AI</span><span>SaaS</span></div>
-        </article>
-      </div>
-    </section>
-
-    <section class="sec" id="projects">
-      <div class="wrap">
-        <p class="label reveal">04 — Projects</p>
-        <h2 class="reveal">Shipped work</h2>
-        <div class="plist">
-          <article class="project reveal">
-            <div class="prow"><h3>ZINC Agent</h3><span class="badge live">Live</span></div>
-            <p>AI project intelligence hub for developers. Live GitHub data, file browser, create issues from chat, and an agent that understands your repos. Dark terminal UI. Full source as a template.</p>
-            <div class="tags"><span>Next.js</span><span>Groq AI</span><span>GitHub API</span><span>Vercel</span></div>
-            <a class="plink" href="https://ahmerstone2.gumroad.com/l/foubdo" target="_blank" rel="noopener">Buy Source →</a>
-          </article>
-          <article class="project reveal">
-            <div class="prow"><h3>TariffAI</h3><span class="badge live">Live</span></div>
-            <p>AI-powered Pakistan Customs HS Code classifier. English or Roman Urdu → PCT codes, confidence scores, chapter, and duty rates. Built for exporters and declarants.</p>
-            <div class="tags"><span>Gemini AI</span><span>Vanilla JS</span><span>Vercel</span><span>Customs</span></div>
-            <a class="plink" href="https://tariffai.vercel.app" target="_blank" rel="noopener">Open Tool →</a>
-          </article>
-          <article class="project reveal">
-            <div class="prow"><h3>Vocal Checkmate</h3><span class="badge live">Live</span></div>
-            <p>Fully voice-controlled chess. Say “E4” and the piece moves. Train calculation and board vision without looking at the board. History and mistake review included.</p>
-            <div class="tags"><span>JavaScript</span><span>Voice API</span><span>Chess Engine</span></div>
-            <a class="plink" href="https://vocal-checkmate.vercel.app" target="_blank" rel="noopener">Open App →</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="sec contact" id="contact">
-      <div class="wrap">
-        <p class="label reveal">05 — Contact</p>
-        <h2 class="reveal">Let’s build something</h2>
-        <p class="sub reveal">Apps, AI tools, automation, or trade-tech — reach out.</p>
-        <div class="links reveal">
-          <a href="mailto:jslegacyapproach@gmail.com">Email</a>
-          <a href="https://wa.me/923390112545" target="_blank" rel="noopener">WhatsApp</a>
-          <a href="https://www.linkedin.com/in/ahmar-ashraf-247545302" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://github.com/ZINC-LESTRIC" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://www.fiverr.com/ahmer10970" target="_blank" rel="noopener">Fiverr</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="wrap foot">
-      <span>© 2026 Ahmar Ashraf — Sialkot, Pakistan</span>
-      <span class="mono">Built with intent. Shipped in public.</span>
+    <div class="stats reveal" id="stats">
+      <div class="stat"><strong data-count="6">0</strong><span>Live Products</span></div>
+      <div class="stat"><strong data-count="4">0</strong><span>AI Tools Shipped</span></div>
+      <div class="stat"><strong data-count="3">0</strong><span>Years Building</span></div>
+      <div class="stat"><strong data-count="500">0</strong><span>GDs Filed</span></div>
     </div>
-  </footer>
-  <script src="script.js"></script>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="wrap">
+    <h2 class="section-title reveal">Builder first. <span>Domain as an edge.</span></h2>
+    <p class="lead reveal">I'm a self-taught full-stack developer from Sialkot. I ship production web apps, AI-integrated tools, and automation workflows — Next.js, React, Node.js, REST APIs, and LLM integrations. I care about clean UX, fast deploys, and tools people actually use.</p>
+    <p class="lead reveal">My background in Pakistan's customs and export operations (GD filing, HS code classification, WeBOC/PSW, FedEx export clearance) gives me something most developers don't have — I understand the real problems in trade. That's why I build trade-tech that works, not generic demos.</p>
+  </div>
+</section>
+
+<section class="section" id="skills">
+  <div class="wrap">
+    <h2 class="section-title reveal">What I work with</h2>
+    <div class="skill-grid">
+      <div class="skill-card reveal stagger-1"><h3>Frontend &amp; Apps</h3><div class="tags"><span>Next.js</span><span>React</span><span>JavaScript</span><span>HTML/CSS</span><span>Responsive UI</span><span>Terminal-style UX</span></div></div>
+      <div class="skill-card reveal stagger-2"><h3>Backend &amp; APIs</h3><div class="tags"><span>Node.js</span><span>REST APIs</span><span>GitHub API</span><span>Serverless</span><span>Auth Tokens</span><span>Webhooks</span></div></div>
+      <div class="skill-card reveal stagger-3"><h3>AI &amp; Agents</h3><div class="tags"><span>LLM APIs</span><span>Claude API</span><span>AI Chat Agents</span><span>Prompt Engineering</span><span>Voice APIs</span><span>RAG Systems</span></div></div>
+      <div class="skill-card reveal stagger-4"><h3>Automation</h3><div class="tags"><span>n8n</span><span>Workflows</span><span>Web Scraping</span><span>Google Sheets</span><span>Lead Pipelines</span></div></div>
+      <div class="skill-card reveal stagger-5"><h3>Customs &amp; Trade-Tech</h3><div class="tags"><span>WeBOC / PSW</span><span>GD Filing</span><span>HS Code Classification</span><span>PCT Tariff Analysis</span><span>Export Documentation</span><span>FedEx Clearance</span></div></div>
+      <div class="skill-card reveal stagger-6"><h3>Ship &amp; Deploy</h3><div class="tags"><span>Vercel</span><span>Git/GitHub</span><span>Python</span><span>VS Code</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="projects">
+  <div class="wrap">
+    <h2 class="section-title reveal">Shipped</h2>
+    <div class="proj-grid">
+      <article class="proj reveal stagger-1">
+        <div class="proj-top"><h3>Vocal Checkmate</h3><span class="badge live">Live</span></div>
+        <p>Fully voice-controlled chess. Say "E4" and the piece moves. Built to train board vision without looking at the board. Game history and mistake review included.</p>
+        <div class="tags" style="margin-bottom:1rem"><span>JavaScript</span><span>Voice API</span><span>Chess Engine</span></div>
+        <a class="proj-link" href="https://vocal-checkmate.vercel.app" target="_blank" rel="noopener">Open App →</a>
+      </article>
+      <article class="proj reveal stagger-2">
+        <div class="proj-top"><h3>ZINC Agent</h3><span class="badge live">Live</span></div>
+        <p>AI project intelligence hub for developers. Live GitHub data, file browser, create issues from chat, agent that understands your repos. Dark terminal UI.</p>
+        <div class="tags" style="margin-bottom:1rem"><span>Next.js</span><span>LLM API</span><span>GitHub API</span><span>Vercel</span></div>
+        <a class="proj-link" href="https://ahmerstone2.gumroad.com/l/foubdo" target="_blank" rel="noopener">Buy Source →</a>
+      </article>
+      <article class="proj reveal stagger-3">
+        <div class="proj-top"><h3>TariffAI</h3><span class="badge live">Live</span></div>
+        <p>AI-powered Pakistan Customs HS Code classifier. English or Roman Urdu input → PCT codes, confidence scores, chapter, duty rates. Built for exporters and declarants.</p>
+        <div class="tags" style="margin-bottom:1rem"><span>LLM API</span><span>Vanilla JS</span><span>Vercel</span><span>Customs</span></div>
+        <a class="proj-link" href="https://tariffai.vercel.app" target="_blank" rel="noopener">Open Tool →</a>
+      </article>
+      <article class="proj reveal stagger-4">
+        <div class="proj-top"><h3>TradeIntel</h3><span class="badge dev">In Dev</span></div>
+        <p>Trade intelligence SaaS for Pakistan's export sector. Shipment trends, buyer patterns, AI analytics so exporters stop flying blind. Launch target 2026.</p>
+        <div class="tags"><span>Trade Intelligence</span><span>Data</span><span>AI</span><span>SaaS</span></div>
+      </article>
+      <article class="proj reveal stagger-5">
+        <div class="proj-top"><h3>K-Crust</h3><span class="badge dev">In Dev</span></div>
+        <p>Korean corn dog street food brand launching in Sialkot. Custom brand identity, menu, and digital presence.</p>
+        <div class="tags"><span>Brand</span><span>Food Tech</span><span>Sialkot</span></div>
+      </article>
+      <article class="proj reveal stagger-6">
+        <div class="proj-top"><h3>Sequel Sports</h3><span class="badge dev">In Dev</span></div>
+        <p>Sportswear export digital catalogue for international buyers. Clean product showcase with inquiry flow.</p>
+        <div class="tags"><span>Next.js</span><span>Export</span><span>B2B</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="sourcing">
+  <div class="wrap">
+    <div class="sourcing-box reveal">
+      <h2>Source from Sialkot — directly.</h2>
+      <p class="subhead">I'm not a middleman. I'm inside the supply chain.</p>
+      <p>Sialkot produces 70–80% of the world's hand-stitched footballs, a major share of global surgical instruments, and premium sportswear and embroidery. I work in customs and export operations here daily — I know verified factories, understand export documentation, and can source with full transparency.</p>
+      <p><strong style="color:#fff">Categories I source:</strong></p>
+      <div class="cats">
+        <div class="cat"><strong>⚽ Sports Goods</strong><span>Footballs, gloves, protective gear</span></div>
+        <div class="cat"><strong>👕 Sportswear &amp; Embroidery</strong><span>Jerseys, training kits, custom apparel</span></div>
+        <div class="cat"><strong>🔪 Surgical Instruments</strong><span>All categories, ISO-certified suppliers</span></div>
+        <div class="cat"><strong>🎽 Garments &amp; Textiles</strong><span>General garments and textiles</span></div>
+      </div>
+      <p>I handle the export documentation personally. No brokers. Direct factory contact. Real prices.</p>
+      <a href="https://wa.me/923390112545" target="_blank" rel="noopener" class="btn btn-fill" style="margin-top:.5rem">Inquire About Sourcing</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="wrap">
+    <h2 class="section-title reveal">Let's build something.</h2>
+    <p class="lead reveal">Open to freelance projects, trade-tech consulting, and export sourcing inquiries.</p>
+    <div class="contact-links reveal">
+      <a href="https://github.com/ZINC-LESTRIC" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/ahmar-ashraf-247545302" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://wa.me/923390112545" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="mailto:jslegacyapproach@gmail.com">Email</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">© 2026 Ahmar Ashraf — Full-Stack Developer &amp; Trade-Tech Builder · Sialkot, Pakistan</div>
+</footer>
+
+<script>
+(function(){
+  const titles=["Full-Stack Developer","AI Tool Builder","Trade-Tech Engineer","Sialkot Export Insider"];
+  const el=document.getElementById("typewriter");
+  let ti=0,ci=0,del=false;
+  function tick(){
+    const full=titles[ti];
+    if(!del){
+      el.textContent=full.slice(0,++ci);
+      if(ci===full.length){del=true;setTimeout(tick,1800);return;}
+    }else{
+      el.textContent=full.slice(0,--ci);
+      if(ci===0){del=false;ti=(ti+1)%titles.length;}
+    }
+    setTimeout(tick,del?35:70);
+  }
+  tick();
+
+  const burger=document.getElementById("burger");
+  const navLinks=document.getElementById("navLinks");
+  if(burger) burger.onclick=()=>navLinks.classList.toggle("open");
+  navLinks.querySelectorAll("a").forEach(a=>a.onclick=()=>navLinks.classList.remove("open"));
+
+  const io=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");}});
+  },{threshold:0.12,rootMargin:"0px 0px -40px 0px"});
+  document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+
+  function countUp(el){
+    const target=+el.dataset.count;if(!target)return;
+    const start=performance.now(),dur=1400;
+    (function frame(now){
+      const p=Math.min((now-start)/dur,1);
+      const eased=1-Math.pow(1-p,3);
+      el.textContent=Math.round(target*eased)+(target>=500?"+":target===3?"+":"");
+      if(p<1)requestAnimationFrame(frame);
+    })(start);
+  }
+  const so=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.querySelectorAll("[data-count]").forEach(countUp);
+        so.unobserve(e.target);
+      }
+    });
+  },{threshold:0.4});
+  const stats=document.getElementById("stats");
+  if(stats)so.observe(stats);
+
+  const canvas=document.getElementById("particles");
+  const ctx=canvas.getContext("2d");
+  let w,h,parts=[];
+  function resize(){w=canvas.width=innerWidth;h=canvas.height=innerHeight;}
+  function init(){
+    parts=Array.from({length:55},()=>({
+      x:Math.random()*w,y:Math.random()*h,
+      r:Math.random()*1.5+0.3,
+      vx:(Math.random()-0.5)*0.28,vy:(Math.random()-0.5)*0.28
+    }));
+  }
+  function draw(){
+    ctx.clearRect(0,0,w,h);
+    for(let i=0;i<parts.length;i++){
+      const p=parts[i];
+      p.x+=p.vx;p.y+=p.vy;
+      if(p.x<0||p.x>w)p.vx*=-1;
+      if(p.y<0||p.y>h)p.vy*=-1;
+      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle="rgba(0,212,255,0.35)";ctx.fill();
+      for(let j=i+1;j<parts.length;j++){
+        const q=parts[j],dx=p.x-q.x,dy=p.y-q.y,d=Math.hypot(dx,dy);
+        if(d<100){
+          ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);
+          ctx.strokeStyle="rgba(0,212,255,"+(0.08*(1-d/100))+")";
+          ctx.lineWidth=0.6;ctx.stroke();
+        }
+      }
+    }
+    requestAnimationFrame(draw);
+  }
+  addEventListener("resize",()=>{resize();init();});
+  resize();init();draw();
+})();
+</script>
 </body>
 </html>
